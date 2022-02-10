@@ -13,6 +13,13 @@ require('./configs/database.config');
 // create one document in the cats collection
 Cat
 
+Cat.create({
+    name: "Garfield",
+    age: 5,
+    color: "orange",
+    friends: ["marco", "carol", "carlos", "yin"]
+  });
+
 // create multiple documents in the cats collection
 
 Cat
