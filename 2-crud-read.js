@@ -9,7 +9,16 @@ require('./configs/database.config');
 // ----------------------------------------------------------------------------
 
 // .find() we are always getting array back as a response
-Cat
+
+Cat.find(
+    {
+        age: {$gt: 0},
+        color: {$in: ["white", "black", "green"]},
+        friends: {$elemMatch: {$eq: "yin"}}
+    }
+)
+.then(cats=> cats.forEach(cat=>console.log(cat)))
+.catch(error => console.log(error))
 
 // .findById() we are always getting object back as a response
 Cat
