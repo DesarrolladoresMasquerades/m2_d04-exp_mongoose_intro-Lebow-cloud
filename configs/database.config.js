@@ -5,7 +5,7 @@ mongoose
   //            |            |
   .connect(
     
-    'mongodb+srv://Lebow:km6nevp2@cluster0.ezbcm.mongodb.net/cats-app-dev?retryWrites=true&w=majority')
+    'mongodb+srv://@cluster0.ezbcm.mongodb.net/cats-app-dev?retryWrites=true&w=majority')
 
   .then(x =>
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
